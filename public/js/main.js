@@ -5,4 +5,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	root.on('value', function(snapshot){
 		console.log(snapshot.numChildren());
 	});
+
+	m.mount(document.getElementById('app'), {
+		view: function(){
+			return m('h2', 'Mitrhil.js');
+		}
+	});
 });
