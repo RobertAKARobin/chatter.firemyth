@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 
+const FirebaseServer = require('firebase-server')
+const firebaseServer = new FirebaseServer(5000, 'localhost.firebaseio.test')
+firebaseServer.setRules(require('./firebase.rules.json'))
+
 app
 	.use('/', express.static('./public'))
 	.use('/vendor', express.static('./node_modules'))

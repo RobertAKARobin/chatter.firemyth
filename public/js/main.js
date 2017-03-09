@@ -1,5 +1,8 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function(){
-	console.log('Hello, world.');
+	var root = firebase.database().ref('/');
+	root.on('value', function(snapshot){
+		console.log(snapshot.numChildren());
+	});
 });

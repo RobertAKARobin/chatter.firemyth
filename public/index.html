@@ -2,6 +2,12 @@
 <html>
 	<head>
 		<title>RobinsProject.js</title>
+		<script src="./vendor/firebase/firebase.js"></script>
+		<script>
+firebase.initializeApp({
+	databaseURL: 'ws://127.0.1:5000'
+});
+		</script>
 		<script src="./js/main.js"></script>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
