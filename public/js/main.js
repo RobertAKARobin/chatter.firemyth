@@ -53,5 +53,8 @@ var ConvoList = (function(){
 
 document.addEventListener('DOMContentLoaded', function(){
 	var convoList = ConvoList.load();
-	m.mount(document.getElementById('app'), convoList);
+	m.route.prefix('#!');
+	m.route(document.getElementById('app'), '/', {
+		'/': convoList
+	});
 });
